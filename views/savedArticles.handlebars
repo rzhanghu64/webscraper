@@ -1,0 +1,66 @@
+<div id="articles" class="container">
+    <hr>
+    <h2>Saved Articles</h2>
+    {{#snippets}}
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">{{headline}}</h5>
+            <p class="card-text">{{summary}}</p>
+            <hr>
+            <p class="card-text"></p>{{comments}}</p>
+            <hr>
+            <a href="{{url}}" class="btn">Full article</a>
+            <button type="button" class="btn comment-btn" data-toggle="modal"
+                data-target="#comment-modal">Comment</button>
+            <button type="button" class="btn delete-btn" data-id="{{_id}}">Remove</button>
+        </div>
+    </div>
+
+    <div class="modal" id="comment-modal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add a comment</h4>
+                <button type="button" class="close" data-dismiss="modal" >
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body mx-3">
+                <div class="md-form">
+                    <textarea id="comment-form" class="form-control" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn save-comment-btn" data-id="{{_id}}">Save comment</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+    {{/snippets}}
+</div>
+
+{{!-- <div class="modal" id="comment-modal" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center">
+                <h4 class="modal-title w-100 font-weight-bold">Add a comment</h4>
+                <button type="button" class="close" data-dismiss="modal" >
+                    &times;
+                </button>
+            </div>
+
+            <div class="modal-body mx-3">
+                <div class="md-form">
+                    <textarea id="comment-form" class="form-control" rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer d-flex justify-content-center">
+                <button class="btn save-comment-btn">Save comment</button>
+            </div>
+        </div>
+    </div>
+</div> --}}

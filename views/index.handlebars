@@ -1,0 +1,15 @@
+<div id="articles" class="container">
+    <a href="/empty" class="btn">Empty Articles</a>
+    <hr>
+    <h2>Fetched Articles</h2>
+    {{#articles}}
+    <div class="card" style="width: 100%;">
+        <div class="card-body">
+            <h5 class="card-title">{{headline}}</h5>
+            <p class="card-text">{{summary}}</p>
+            <a href="{{url}}" class="btn">Full article</a>
+            <button type="button" class="btn save-btn" data-id="{{_id}}">Save</button>
+        </div>
+    </div>
+    {{/articles}}
+</div>
